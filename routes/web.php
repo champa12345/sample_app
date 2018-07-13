@@ -18,4 +18,39 @@ Route::get('/', function () {
 Route::get('/home', 'PagesController@home');
 Route::get('/about', 'PagesController@about');
 Route::get('/contact','PagesController@contact');
-Route::get('/mail','PagesController@contact');
+Route::get('/mail', 'PagesController@mail');
+Route::get('/category', function ()
+{
+	return view ('category');
+})->name('proflie');
+// Route::get('user/{id}', function ($id) {
+//     return 'User '.$id;
+// });
+
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('/', function ()    {
+//         // Uses Auth Middleware
+//     });
+
+//     Route::get('user/profile', function () {
+//         return view ('author');
+//     });
+// })->name('profile');
+
+Route::get('user/profile', function () {
+    return view('proflie');
+})->name('proflie');
+
+Route::get('posts', function () { 
+    return view('post');
+})->name('posts');
+
+Route::group(['namespace' => 'Admin'], function () {
+    Route::get('/', function ()    {
+        //code
+    });
+
+    Route::get('posts', function () {
+        //code
+    });
+});

@@ -15,4 +15,7 @@ class PagesController extends Controller
      public function contact(){
     	return view('contact');
     }
+    public function mail(){
+    	return view('mail');
+    }
 }
