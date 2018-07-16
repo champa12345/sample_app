@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Foundation\Http\FormRequest;
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -14,6 +15,12 @@ class PostsController extends Controller
     public function index()
     {
         //
+    }
+
+    public function home()
+    {
+        $posts = Post::all();
+        return view('posts.home', compact('posts'));
     }
 
     /**

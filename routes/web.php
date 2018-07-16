@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+   return view ('welcome');
 });
 
 Route::get('/home', 'PagesController@home');
@@ -29,8 +29,40 @@ Route::post('/contact', 'TicketsController@store');
 Route::get('/posts','PagesController@post');
 Route::post('/posts', 'PostsController@store');
 
-
+Route::get('/tickets', 'TicketsController@index');
+Route::get('/posts', 'PostsController@home');
 // Route::post('/map','MapControlle')
+
+Route::get('/ticket/{slug?}', 'TicketsController@show');
+
+Route::get('/ticket/{slug?}/edit','TicketsController@edit');
+Route::post('/ticket/{slug?}/edit','TicketsController@update');
+
+Route::post('/ticket/{slug?}/delete','TicketsController@destroy');
+
+Route::get('sendemail', function () {
+	$data = array(
+	'name' => "Learning Laravel",
+	);
+	Mail::send('mail.welcome', $data, function ($message) {
+	$message->from('champa250396@gmail.com', 'Learning Laravel');
+	$message->to('thuydungcnptit@gmail.com')->subject('Learning Laravel test email');
+	});
+	return "Your email has been sent successfully";
+});
+
+
+Route::post('/comment', 'CommentsController@newComment');
+
+
+Route::get('/example', function(){
+
+ 		return view('example',['name' => 'test']);
+
+});
+
+
+
 
 
 // Route::get('user/{id}', function ($id) {
