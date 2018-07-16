@@ -1,8 +1,9 @@
 <html>
 <head>
  	<title> @yield('title') </title>
-	<!-- <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}" >
-	<link rel="stylesheet" href="{!! asset('css/bootstrap-theme.min.css') !!}">
+	<!-- <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}" > -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css" >
+	<!-- <link rel="stylesheet" href="{!! asset('css/bootstrap-theme.min.css') !!}">
 	<link rel="stylesheet" href="{!! asset('css/bootstrap-theme.min.css') !!}">
 	<link rel="stylesheet" href="{!! asset('css/bootstrap-theme.min.css') !!}"> -->
 	<!-- Material Design fonts -->

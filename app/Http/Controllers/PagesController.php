@@ -13,7 +13,12 @@ class PagesController extends Controller
     	return view('about');
     }
      public function contact(){
-    	return view('contact');
+    	return view('tickets.create');
+        
+    }
+     public function post(){
+        return view('posts.create');
+        
     }
     public function mail(){
     	return view('mail');

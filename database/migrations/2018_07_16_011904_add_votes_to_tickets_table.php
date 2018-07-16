@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class PaDu extends Migration
+class AddVotesToTicketsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,9 @@ class PaDu extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('tickets', function (Blueprint $table) {
+            //
+        });
     }
 
     /**
@@ -23,6 +25,8 @@ class PaDu extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('tickets', function (Blueprint $table) {
+            //
+        });
     }
 }
